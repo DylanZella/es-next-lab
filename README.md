@@ -22,3 +22,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+---
+
+`这个项目还处于实施阶段，目前不会上线`
