@@ -2,7 +2,7 @@
   <div class="common-layout">
     <el-container>
       <el-header class="fixed w-full bg-white shadow-sm border-b-1 flex">
-        <span>ES6-lab</span>
+        <span>ES6-lab ES6实验室</span>
         <el-icon>
           <connection />
         </el-icon>
