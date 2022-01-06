@@ -1,21 +1,34 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  <NConfigProvider :theme="store.state.theme" :locale="store.state.locale">
+    <!-- <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" /> -->
+    <Home />
+    <NButton @click="store.state.theme = darkTheme">深色</NButton>
+    <NButton @click="store.state.theme = null">浅色</NButton>
+  </NConfigProvider>
 </template>
 
-<script lang="ts">
-  import {defineComponent} from 'vue';
-  import HelloWorld from './components/HelloWorld.vue';
+<script lang="ts" setup>
+  import {darkTheme, NConfigProvider, NButton} from 'naive-ui';
+  import HelloWorld from '@/components/HelloWorld.vue';
+  import Home from './pages/Home/Home.vue';
+  import {useStore} from '@/store/store';
 
-  export default defineComponent({
-    name: 'App',
-    components: {
-      HelloWorld,
-    },
-  });
+  const store = useStore();
+
+  // export default defineComponent({
+  //   setup() {
+  //     return {
+  //       darkTheme,
+  //       HelloWorld,
+  //       NConfigProvider,
+  //       NButton,
+  //       theme: ref<any>(null),
+  //     };
+  //   },
+  // });
 </script>
 
-<style>
+<style lang="scss">
   #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
