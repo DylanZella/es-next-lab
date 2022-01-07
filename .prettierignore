@@ -1,9 +1,11 @@
-# Ignore artifacts:
+# Ignore
 build
 coverage
 public
 dist
 dist_electron
+.cache
+.temp
 
 # README
 *.md
