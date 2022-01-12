@@ -1,7 +1,8 @@
 import {defineUserConfig} from 'vuepress';
 import type {DefaultThemeOptions} from 'vuepress';
+import type {ViteBundlerOptions} from '@vuepress/bundler-vite';
 
-export default defineUserConfig<DefaultThemeOptions>({
+export default defineUserConfig<DefaultThemeOptions, ViteBundlerOptions>({
   // 站点配置
   locales: {
     '/': {
@@ -45,13 +46,18 @@ export default defineUserConfig<DefaultThemeOptions>({
       {
         locales: {
           '/': {
-            placeholder: 'Search',
-          },
-          '/zh/': {
             placeholder: '搜索',
+          },
+          '/en/': {
+            placeholder: 'Search',
           },
         },
       },
     ],
   ],
+  // 打包配置
+  bundlerConfig: {
+    viteOptions: {},
+    vuePluginOptions: {},
+  },
 });
