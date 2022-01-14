@@ -15,10 +15,10 @@
     "types": ["webpack-env"],
     "paths": {
       "@/*": ["src/*"],
-      "#/*": ["docs/.vuepress/*"]
+      "#/*": ["docs/*"]
     },
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "tests/**/*.ts", "tests/**/*.tsx"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "tests/**/*.ts", "tests/**/*.tsx", "docs/**/*.ts", "docs/**/*.tsx", "docs/**/*.vue"],
   "exclude": ["node_modules"]
 }
